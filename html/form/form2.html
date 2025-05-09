@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Soverteria</legend>
+		<fieldset>
+			<legend>Informações Pessoais</legend>
+
+			<div class="">
+				<label for="nome">Nome</label>
+				<input type="text" name="user_nome" id="nome" required>
+			</div>
+
+			<div class="">
+				<label for="sobrenome">Sobrenome</label>
+				<input type="text" name="user_sobrenome" id="sobrenome" required>
+			</div>
+
+			<div class="">
+				<label for="email">Email</label>
+				<input type="email" name="user_email" id="email" required>
+			</div>
+
+			<div class="">
+				<label for="nascimento">Data de nascimento</label>
+				<input type="date" name="user_nascimento" id="nascimento">
+			</div>
+
+			<div class="">
+				<label for="rg">RG</label>
+				<input type="text" name="user_rg" id="rg">
+			</div>
+
+			<div class="">
+				<label for="cpf">CPF</label>
+				<input type="text" name="user_cpf" id="cpf">
+			</div>
+
+			<div class="">
+				<label for="nomemae">Nome da mãe</label>
+				<input type="text" name="user_nomemae" id="nomemae" required>
+			</div>
+
+			<div class="">
+				<label for="nomepai">Nome do pai</label>
+				<input type="text" name="user_nomepai" id="nomepai">
+			</div>
+
+			<div>
+				<label for="genero">Gênero</label>
+				<select name="user_genero" id="genero">
+					<option value="MASCULINO">Masculino</option>
+					<option value="FEMININO">Feminino</option>
+					<option value="NAOBINARIO">Não binário</option>
+				</select>
+			</div>
+		</fieldset>
+
+		<br>
+
+		<fieldset>
+			<legend>Endereço de entrega</legend>
+			<div>
+				<label for="cep">CEP</label>
+				<input type="text" id="cep" name="user_cep" required>
+			</div>
+
+			<div>
+				<label for="pais">País</label>
+				<input type="text" id="pais" name="user_pais">
+			</div>
+
+			<div>
+				<label for="estado">Estado</label>
+				<input type="text" id="estado" name="user_estado">
+			</div>
+
+			<div>
+				<label for="cidade">Cidade</label>
+				<input type="text" id="cidade" name="user_cidade">
+			</div>
+
+			<div>
+				<label for="bairro">Bairro</label>
+				<input type="text" id="bairro" name="user_bairro">
+			</div>
+
+			<div>
+				<label for="rua">Rua</label>
+				<input type="text" id="rua" name="user_rua">
+			</div>
+
+			<div>
+				<label for="numero">Numero</label>
+				<input type="text" id="numero" name="user_numero">
+			</div>
+
+			<div>
+				<label for="hora">Hora de entrega</label>
+				<input type="datetime" id="hora" name="user_hora">
+			</div>
+		</fieldset>
+		<br>
+
+		<fieldset>
+			<legend>Sabores:</legend>
+			<div>
+				<a href="baunilha.html">Baunilha</a>
+				<a href="napolitano.html">Napolitano</a>
+				<a href="sensacao.html">Sensação</a>
+			</div>
+			<div>
+				<label for="sabor">Sabor</label>
+				<select name="" id="sabor">
+					<option value="baunilha">Baunilha</option>
+					<option value="napolitano">Napolitano</option>
+					<option value="sensacao">Sensação</option>
+				</select>
+			</div>
+			<br>
+			<button>Enviar pedido</button>
+		</fieldset>
+	</fieldset>
+</body>
+
+
+</html>

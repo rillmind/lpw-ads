@@ -1,0 +1,14 @@
+div, p{
+    margin: 10px 0;
+    height: 400px;
+    width: 400px;
+    border: 2px solid rgb(44, 44, 44);
+}
+
+#blueviolet {
+    background-color: blueviolet;
+}
+
+#goldenrod {
+    background-color: goldenrod;
+}

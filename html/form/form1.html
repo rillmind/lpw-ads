@@ -87,6 +87,86 @@
 
     <br>
 
+    <fieldset>
+      <legend>Diciplinas Inscritas</legend>
+
+      <div>
+        <label for="pi1">Pi1</label>
+        <input type="checkbox" name="pi1" id="pi1">
+      </div>
+
+      <div>
+        <label for="bd1">Bd1</label>
+        <input type="checkbox" name="bd1" id="bd1">
+      </div>
+
+      <div>
+        <label for="tap">Tap</label>
+        <input type="checkbox" name="tap" id="tap">
+      </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Horário das aulas</legend>
+      <div>
+        <label for="matutino">Matutino</label>
+        <input type="radio" name="horario" id="matutino" value="MATUTINO">
+      </div>
+
+      <div>
+        <label for="vespertino">Vespertino</label>
+        <input type="radio" name="horario" id="vespertino" value="VESPERTINO">
+      </div>
+
+      <div>
+        <label for="noturno">Noturno</label>
+        <input type="radio" name="horario" id="noturno" value="NOTURNO">
+      </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Transporte</legend>
+      <div>
+        <label for="meio">Selecione meio de transporte</label>
+        <select name="transporte" id="meio">
+          <option value="pe">a Pé</option>
+          <option value="carro">Carro</option>
+          <option value="moto">Moto</option>
+          <option value="onibus">Onibus</option>
+          <option value="bicicleta">Bicicleta</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Temperatura na sua cidade</legend>
+      <div>
+        <label for="temp">Temperatura</label>
+        <input type="range" name="temp" id="temp">
+      </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Login</legend>
+      <div>
+        <label for="login">Username:</label>
+        <input type="text" name="login" id="login">
+      </div>
+      <br>
+      <div>
+        <label for="senha">*Senha:</label>
+        <input type="password" name="senha" id="senha" required>
+      </div>
+    </fieldset>
+
     <button type="submit">Enviar</button>
   </form>
 </body>
