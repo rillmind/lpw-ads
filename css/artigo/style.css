@@ -1,0 +1,18 @@
+main {
+    width: 99vw; 
+    height: 83.4vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+header {
+    background-color: blue;
+    height: 150px;
+}
+
+div {
+    margin: 10px;
+    padding: 10px;
+    background-color: bisque;
+}

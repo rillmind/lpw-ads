@@ -1,0 +1,31 @@
+div {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border: solid black 10px;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column ;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.verde {
+    background-color: aquamarine;
+}
+
+.azul {
+    background-color: aqua;
+}
+
+.amarelo {
+    background-color: rgb(255, 255, 120);
+}
+
+.vermelho {
+    background-color: rgb(255, 87, 87);
+}
