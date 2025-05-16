@@ -1,18 +1,25 @@
 main {
-    width: 99vw; 
-    height: 83.4vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
+  width: 99vw;
+  height: 83.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  column-gap: 10px;
 }
 
 header {
-    background-color: blue;
-    height: 150px;
+  background-color: blue;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
 }
 
 div {
-    margin: 10px;
-    padding: 10px;
-    background-color: bisque;
+  margin: 10px;
+  padding: 10px;
+  background-color: bisque;
+  width: 30vw;
 }
