@@ -1,50 +1,95 @@
 window.addEventListener("load", main);
 
+let market = [
+  {
+    name: "Feijão",
+    value: 7.5,
+  },
+  {
+    name: "Arroz",
+    value: 6.5,
+  },
+  {
+    name: "Macarrão",
+    value: 4.0,
+  },
+  {
+    name: "Biscoito",
+    value: 3.5,
+  },
+  {
+    name: "Água",
+    value: 2.5,
+  },
+];
+
+let total = 0;
+
 function main(event) {
   event.preventDefault();
 
-  let market = [
-    {
-      nome: "Feijão",
-      valor: 7.5,
-    },
-    {
-      nome: "Arroz",
-      valor: 6.5,
-    },
-    {
-      nome: "Macarrão",
-      valor: 4.0,
-    },
-    {
-      nome: "Biscoito",
-      valor: 3.5,
-    },
-    {
-      nome: "Água",
-      valor: 2.5,
-    },
-  ];
+  const products = document.getElementById("products");
 
-  const result = document.getElementById("result");
-
-  result.innerHTML = "";
-
-  const div = document.createElement("div");
+  products.style.display = "flex";
 
   for (let i = 0; i < market.length; i++) {
-    const nome = document.createElement("p");
-    const valor = document.createElement("p");
-    const botao = document.createElement("button");
+    const div = document.createElement("div");
+    const name = document.createElement("p");
+    const value = document.createElement("p");
+    const button = document.createElement("button");
 
-    nome.innerHTML = market[i]["nome"];
-    valor.innerHTML = market[i]["valor"];
-    botao.innerHTML = "Enviar";
+    div.style.margin = "0 10px";
 
-    div.appendChild(nome);
-    div.appendChild(valor);
-    div.appendChild(botao);
+    name.innerHTML = `${market[i]["name"]}`;
+    value.innerHTML = `R$${market[i]["value"].toFixed(2).replace(".", ",")}`;
+    button.innerHTML = "Adicionar";
+    button.id = i;
+    button.addEventListener("click", addCart);
+
+    div.appendChild(name);
+    div.appendChild(value);
+    div.appendChild(button);
+
+    products.appendChild(div);
   }
+}
 
-  result.appendChild(div);
+function addCart(event) {
+  const product = market[event.target.id];
+
+  const cart = document.getElementById("carrinho");
+  const totalText = document.getElementById("total");
+
+  const div = document.createElement("div");
+  const name = document.createElement("p");
+  const value = document.createElement("p");
+  const remove = document.createElement("button");
+
+  name.innerHTML = `${product.name}`;
+  value.innerHTML = `R$${product.value.toFixed(2).replace(".", ",")}`;
+  remove.innerHTML = "x";
+  remove.addEventListener("click", removeCart);
+
+  div.appendChild(name);
+  div.appendChild(value);
+  div.appendChild(remove);
+
+  cart.appendChild(div);
+
+  total += product.value;
+  totalText.innerHTML = `Total: R$${total.toFixed(2).replace(".", ",")}`;
+}
+
+function removeCart(event) {
+  const price = event.target.parentNode.children[1].innerHTML
+    .replace("R$", "")
+    .replace(",", ".");
+
+  total -= price;
+
+  const totalP = document.getElementById("total");
+
+  totalP.innerHTML = `Total: R$${total.toFixed(2).replace(".", ",")}`;
+
+  event.target.parentNode.remove();
 }
