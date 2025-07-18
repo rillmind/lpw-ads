@@ -1,17 +1,29 @@
 {
   "name": "nodeserver",
-  "module": "index.ts",
-  "type": "module",
-  "description": "Api REST",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+  "module": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
   },
   "dependencies": {
+    "@types/express": "^5.0.3",
+    "cors": "^2.8.5",
+    "eslint": "^9.31.0",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.31.0",
+    "@eslint/json": "^0.13.0",
+    "@eslint/markdown": "^7.0.0",
+    "@types/bun": "latest",
+    "globals": "^16.3.0"
+  },
+  "description": "Api REST",
+  "private": true,
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }

@@ -1,32 +1,18 @@
 window.addEventListener("load", main);
 
-let market = [
-  {
-    name: "Feijão",
-    value: 7.5,
-  },
-  {
-    name: "Arroz",
-    value: 6.5,
-  },
-  {
-    name: "Macarrão",
-    value: 4.0,
-  },
-  {
-    name: "Biscoito",
-    value: 3.5,
-  },
-  {
-    name: "Água",
-    value: 2.5,
-  },
-];
-
 let total = 0;
 
-function main(event) {
+let market = [];
+
+async function acessarBack() {
+  const res = await fetch("http://127.0.0.1:2306/products");
+  return await res.json();
+}
+
+async function main(event) {
   event.preventDefault();
+
+  market = await acessarBack();
 
   const products = document.getElementById("products");
 
